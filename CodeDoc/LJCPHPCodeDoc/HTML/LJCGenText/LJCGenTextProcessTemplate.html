@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCGenTextProcessTemplate.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>ProcessTemplate</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCGenTextLib.html'>LJCGenTextLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCGenText.html'>LJCGenText</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function ProcessTemplate</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$templateFileSpec - The template file.</div>
+	<div class='Text'>$sections - The data sections.</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public function ProcessTemplate(string $templateFileSpec<br />, LJCSections $sections) : ?string
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Processes the Template and Data to produce the output string.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCGenTextLib.php";
+require_once "$webCommonPath/LJCGenTextSectionLib.php";
+
+// $sections is an LJCSections object.
+$sections = LJCSections::Deserialize("Sections.xml");
+
+$genText = new LJCGenText();
+$templateFileSpec = "GenDataLib\Templates\ClassTemplate.html";
+$outputString = $genText->ProcessTemplate($templateFileSpec, $sections);</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

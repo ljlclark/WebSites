@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCCollectionBase.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LJCCollectionBase</title>
+	<meta charset='utf-8' />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
+	<meta name="description" content="PHP Class code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCCollectionLib.html'>LJCCollectionLib</a><br /></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Class LJCCollectionBase</div>
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						class LJCCollectionBase
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Represents a Collection of objects.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		The LJCCollectionBase class provides the code that can be inherited to create a strongly typed Collection. <p> It accomplishes this by implementing IteratorAggregate which provides "foreach" functionality and Countable which provides "count" functionality. </p> <p> A strongly typed collection class would extend (inherit) from this base class  and add an AddObject() method that would require the strongly typed object collection element. This is what makes the collection strongly typed. </p> <p> The strongly typed collection class would also provide a Get() method that could retrieve the internal array element by key. </p> For an example of how this works, see class: LJCDBAccessLib-LJCDbColumns.
+	</div>
+	<br />
+	<div id='Title'>Public Functions</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBaseAddItem.html'>AddItem</a></td>
+			<td class='ListTable'>
+				Adds an object and key value.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBaseGetItem.html'>GetItem</a></td>
+			<td class='ListTable'>
+				Get the item by Key value.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBaseGetKeys.html'>GetKeys</a></td>
+			<td class='ListTable'>
+				Gets an indexed array of keys.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBaseGetValues.html'>GetValues</a></td>
+			<td class='ListTable'>
+				Gets an indexed array of objects.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBaseHasKey.html'>HasKey</a></td>
+			<td class='ListTable'>
+				Indicates if a key already exists.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBaseRemove.html'>Remove</a></td>
+			<td class='ListTable'>
+				Remove the item by Key value.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBasecount.html'>count</a></td>
+			<td class='ListTable'>
+				Allows Count(object).
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBasegetIterator.html'>getIterator</a></td>
+			<td class='ListTable'>
+				Allows foreach()
+			</td>
+		</tr>
+	</table>
+	<div class='Text'>8 Functions</div>
+	<br />
+	<div id='Title'>Public Properties</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCCollectionBase$Item.html'>$Item</a></td>
+			<td class='ListTable'>
+				The elements array.
+			</td>
+		</tr>
+	</table>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

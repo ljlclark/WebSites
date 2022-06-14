@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCGenDataGen.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LJCGenDataGen</title>
+	<meta charset='utf-8' />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
+	<meta name="description" content="PHP Class code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCGenDataGenLib.html'>LJCGenDataGenLib</a><br /></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Class LJCGenDataGen</div>
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						class LJCGenDataGen
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Provides methods to generate GenData XML files.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		The GenData XML files  provide the  data for GenTextLib-LJCGenText to generate CodeDoc HTML  files. <p> The GenData XML is intended to display the XML Comments based on the Text Template that will be used. </p> <p> The Text Section and Replacement names must match  those expected by the Template. </p> <p> The number and names of sections, items and replacements depends on the GenData from the PHP files and the requirements of the HTML Template. </p> This is the standard layout for the GenData XML files. <pre> &lt;Data xmlns:xsd="http://www.w3.org/2001/XMLSchema"<br />  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;<br />   &lt;Sections&gt;<br />     &lt;Section&gt;<br />       &lt;Begin/&gt;<br />       &lt;Name&gt;Main&lt;/Name&gt;<br />       &lt;Items&gt;<br />         &lt;Item&gt;<br />           &lt;Replacements&gt;<br />             &lt;Replacement&gt;<br />               &lt;Name&gt;&lt;/Name&gt;<br />               &lt;Value&gt;&lt;/Value&gt;<br />             &lt;Replacement&gt;<br />           &lt;Replacements&gt;<br />         &lt;Item&gt;<br />       &lt;Items&gt;<br />     &lt;Section&gt;<br />   &lt;Sections&gt;<br /> &lt;/Data&gt;</pre>
+	</div>
+	<br />
+	<div id='Title'>Public Functions</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCGenDataGenconstruct.html'>construct</a></td>
+			<td class='ListTable'>
+				Initializes an object instance.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCGenDataGenCreateLibXMLString.html'>CreateLibXMLString</a></td>
+			<td class='ListTable'>
+				Creates a Lib GenData XML string and optional file.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCGenDataGenCreateMethodParamString.html'>CreateMethodParamString</a></td>
+			<td class='ListTable'>
+				Creates a Method Params section GenData XML string.
+			</td>
+		</tr>
+	</table>
+	<div class='Text'>3 Functions</div>
+	<br />
+	<div id='Title'>Public Properties</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCGenDataGen$HTMLPath.html'>$HTMLPath</a></td>
+			<td class='ListTable'>
+				_PropertySummary_
+			</td>
+		</tr>
+	</table>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

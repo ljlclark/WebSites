@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCCollectionBaseAddItem.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>AddItem</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCCollectionLib.html'>LJCCollectionLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCCollectionBase.html'>LJCCollectionBase</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function AddItem</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$item - The object to be added to the collection.</div>
+	<div class='Text'>$key - The element key.</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		The added item.
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						protected function AddItem($item, $key = null)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Adds an object and key value.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCCollectionLib.php";
+
+// Add to class that extends LJCCollectionBase
+// Adds an object and key value.
+public function AddObject(ObjectItem $item, $key = null)
+{
+  if (null == $key)
+  {
+    $key = $item->Name;
+  }
+  $retValue = $this-><b>AddItem</b>($item, $key);
+  return $retValue;
+}</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

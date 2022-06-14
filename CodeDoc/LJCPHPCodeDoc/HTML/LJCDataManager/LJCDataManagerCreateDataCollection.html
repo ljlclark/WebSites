@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCDataManagerCreateDataCollection.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CreateDataCollection</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCDataManagerLib.html'>LJCDataManagerLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCDataManager.html'>LJCDataManager</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function CreateDataCollection</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$collection - A Collection Object to use as a template.</div>
+	<div class='Text'>$dataObject - A Data Object to use as a template.</div>
+	<div class='Text'>$rows - An array of data records.</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		An array of Data object records or null if there are no rows.
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public function CreateDataCollection(object $collection<br />, object $dataObject, array $rows)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Creates an array of typed Data Objects from a DB rows array.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		This method provides Object to Relational Mapping (ORM) as it maps an array  of data records into a collection of strongly  typed data objects. It calls the CreateDataObject() method for each data record and adds the resulting typed object to the strongly typed collection. <p> The collection must be an object that extends (inherits from) LJCCollectionLib.php class LJCCollectionBase and provides an AddObject method with the signature  AddObject(DataObject $item, $key = null); Where DataObject is a strongly typed Data Object. See LJCDbAccessLib.php class LJCDbColumns and LJCDbColumn for examples. </p> <p> The AddObject() method should supply a default key value or the method can be changed to require the programmer to enter it by removing the "= null" from the method signature. </p> The DataObject must supply a Clone() method.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCDataManagerLib.php";
+
+// See constructor for how to create $connectionValues.
+$manager = new LJCDataManager($connectionValues, "TableName");
+
+class Person
+{
+  public int $ID;
+  public string $Name;
+}
+
+$rows = $manager->Load(null);
+$persons = $manager->CreateDataCollection(new Persons(), new Person()
+  , $rows);
+foreach ($persons as $person)
+{
+  echo $person->ID;
+  echo $person->Name;
+}</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

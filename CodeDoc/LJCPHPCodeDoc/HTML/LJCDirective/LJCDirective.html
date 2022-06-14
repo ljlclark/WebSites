@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCDirective.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LJCDirective</title>
+	<meta charset='utf-8' />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
+	<meta name="description" content="PHP Class code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCGenTextSectionLib.html'>LJCGenTextSectionLib</a><br /></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Class LJCDirective</div>
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						class LJCDirective
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Represents a template Directive.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		Template Directives are include in a valid comment line for whatever text type or language is being generated. A line which contains a Directive will not appear in the generated text. <p> The valid Directives are: </p> <p> &lt;!-- #SectionBegin Name --> <br /> Indicates the beginning of a Section.  The Directive includes the Section name. The Section name is used in the  XMLData to indicate to which Section the Items and Replacements apply. </p> <p> &lt;!-- #SectionEnd Name --> <br /> Indicates the end of a Section. The  section name is optional and simply helps to identify what section is  ending. </p> <p> &lt;!-- #Value _ReplacementValue_ --> <br /> A value Directive is currently informational only.  It identifies a Replacement value that appears in Items within that  Section. </p> <p> &lt;!-- #IfBegin _ReplacementValue_ ComparisonValue --> <br /> This Directive indicates the beginning of conditional text. If the _ReplacementValue_ is  equal to the ComparisonValue, then the next text lines are generated up to  the #IfElse or #IfEnd directive. <br /> The ComparisonValue can be "NotNull". The #IfBegin will be true if the _ReplacementValue_ is not null. </p> <p> &lt;!-- #IfElse --> <br /> The next text lines are generated  up to the #IfEnd Directive if the #IfBegin Directive was false. </p> <p> &lt;!-- #IfEnd _ReplacementValue_ comparisonValue --> <br /> The end of the #IfBegin text. The _ReplacementValue_ and ComparisonValue are optional and help to identify which #IfBegin is ending.
+	</div>
+	<br />
+	<div id='Title'>Public Functions</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDirectiveFind.html'>Find</a></td>
+			<td class='ListTable'>
+				Find any Directives in a line.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDirectiveconstruct.html'>construct</a></td>
+			<td class='ListTable'>
+				Initializes an object instance.
+			</td>
+		</tr>
+	</table>
+	<div class='Text'>2 Functions</div>
+	<br />
+	<div id='Title'>Public Properties</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDirective$Name.html'>$Name</a></td>
+			<td class='ListTable'>
+				The Directive Name.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDirective$Type.html'>$Type</a></td>
+			<td class='ListTable'>
+				The Directive Type.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDirective$Value.html'>$Value</a></td>
+			<td class='ListTable'>
+				The compare value.
+			</td>
+		</tr>
+	</table>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCDataManagerLoad.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Load</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCDataManagerLib.html'>LJCDataManagerLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCDataManager.html'>LJCDataManager</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function Load</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$keyColumns - The where clause key columns.</div>
+	<div class='Text'>$propertyNames - The included column property names.</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		An array of data records.
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public function Load(?LJCDbColumns $keyColumns, array $propertyNames = null<br />, LJCJoins $joins = null)	: ?array
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Loads the records for the provided values.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		Loads records from the database. <p> The $keyColumns collection parameter contains the data for the where clause. </p> The optional $propertyNames array parameter contains the names of the properties that will be retrieved. All columns are retrieved if it is null.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCDataManagerLib.php";
+require_once "$webCommonPath/LJCDBAccessLib.php";
+
+// See constructor for how to create $connectionValues.
+$tableName = "TableName";
+$manager = new LJCDataManager($connectionValues, $tableName);
+
+$propertyNames = [];
+$propertyNames[] = "ID";
+$propertyNames[] = "Name";
+$affectedCount = $manager->Load(null, $propertyNames);
+
+// $manager->SQL =
+// select
+//   TableName.ID,
+//   TableName.Name
+// from TableName;</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

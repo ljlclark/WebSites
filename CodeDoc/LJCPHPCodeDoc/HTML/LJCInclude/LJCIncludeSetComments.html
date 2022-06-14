@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCIncludeSetComments.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>SetComments</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCIncludeLib.html'>LJCIncludeLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCInclude.html'>LJCInclude</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function SetComments</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$line - The code line.</div>
+	<div class='Text'>$codeFileSpec - The Code File spec.</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public function SetComments(string $includeLine, string $codeFileSpec)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Sets the comments from the specified include file.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+require_once "LJCIncludeLib.php";
+
+ $includeFile = new LJCInclude();
+ $line = "/// &lt;include path='items/SetComment/*' file='Doc/LJCComments.xml'/&gt;"
+ $includeFile->SetComments($line, "SourceFile.php");
+ foreach ($includeFile->Comments as $comment)
+ {
+   // Process each XML comment.
+   // This code is included in the LJCComments->SetComment() method.
+ }</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

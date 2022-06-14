@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCDataManager.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LJCDataManager</title>
+	<meta charset='utf-8' />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
+	<meta name="description" content="PHP Class code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCDataManagerLib.html'>LJCDataManagerLib</a><br /></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Class LJCDataManager</div>
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						class LJCDataManager
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Provides Standard DB Table methods.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		The DataManager class provides a higher level of abstraction on top of the DataAccess class. <p> It does not require the developer to create SQL statements. Instead the developer can use strongly typed DataObjects, KeyColumn definitions, Join definitions and Included PropertyNames arrays to interact with the database. </p> <p> The DataManager retrieves the Table SchemaColumn Definitions from the database. It uses these definitions to create the SQL statements and modifies them based on KeyColumn definitions, Join definitions and PropertyNames arrays. </p> The retrieved data can be mapped into strongly typed DataObjects using the methods CreateDataCollection() and CreateDataObject().
+	</div>
+	<br />
+	<div id='Title'>Public Functions</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerconstruct.html'>construct</a></td>
+			<td class='ListTable'>
+				Initializes a class instance with the provided values.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerAdd.html'>Add</a></td>
+			<td class='ListTable'>
+				Adds the record for the provided values.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerDelete.html'>Delete</a></td>
+			<td class='ListTable'>
+				Deletes the records for the provided values.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerLoad.html'>Load</a></td>
+			<td class='ListTable'>
+				Loads the records for the provided values.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerRetrieve.html'>Retrieve</a></td>
+			<td class='ListTable'>
+				Retrieves the record for the provided values.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerUpdate.html'>Update</a></td>
+			<td class='ListTable'>
+				Updates the records for the provided values.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerSQLExecute.html'>SQLExecute</a></td>
+			<td class='ListTable'>
+				Executes an Add, Delete or Update SQL statement.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerSQLLoad.html'>SQLLoad</a></td>
+			<td class='ListTable'>
+				Executes a Select SQL statement.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerSQLRetrieve.html'>SQLRetrieve</a></td>
+			<td class='ListTable'>
+				Executes a Select SQL statement.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerCreateDataCollection.html'>CreateDataCollection</a></td>
+			<td class='ListTable'>
+				Creates an array of typed Data Objects from a DB rows array.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManagerCreateDataObject.html'>CreateDataObject</a></td>
+			<td class='ListTable'>
+				Populates a typed Data Object with values from a DB row.
+			</td>
+		</tr>
+	</table>
+	<div class='Text'>11 Functions</div>
+	<br />
+	<div id='Title'>Public Properties</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManager$DbAccess.html'>$DbAccess</a></td>
+			<td class='ListTable'>
+				The DbAccess object.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManager$Joins.html'>$Joins</a></td>
+			<td class='ListTable'>
+				The Join definitions.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManager$OrderByNames.html'>$OrderByNames</a></td>
+			<td class='ListTable'>
+				The OrderBy names.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManager$SchemaColumns.html'>$SchemaColumns</a></td>
+			<td class='ListTable'>
+				The column definitions.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManager$SQL.html'>$SQL</a></td>
+			<td class='ListTable'>
+				The last SQL statement.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCDataManager$TableName.html'>$TableName</a></td>
+			<td class='ListTable'>
+				The table name.
+			</td>
+		</tr>
+	</table>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

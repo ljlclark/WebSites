@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCDataManagerCreateDataObject.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CreateDataObject</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCDataManagerLib.html'>LJCDataManagerLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCDataManager.html'>LJCDataManager</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function CreateDataObject</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$dataObject - A Data Object to use as a template.</div>
+	<div class='Text'>$row - An array of data columns.</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		A data object record.
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public function CreateDataObject($dataObject, array $row)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Populates a typed Data Object with values from a DB row.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		This method provides Object to Relational Mapping (ORM) as it maps the data columns to properties in the DataObject and copies the matching values. <br /> <br /> The data column keys which are the result set column names must match property names in the DataObject.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCDBAccessLib.php";
+
+// See constructor for how to create $connectionValues.
+$manager = new LJCDataManager($connectionValues, "TableName");
+
+class Person
+{
+  public int $ID;
+  public ?string $Name;
+}
+
+$keyColumns = new LJCDbColumns();
+$keyColumns->Add("ID", value: 1);
+$row = $manager->Retrieve($keyColumns);
+
+$dataObject = new Person();
+$person = $manager->CreateDataObject($dataObject, $row);
+echo $person->ID;
+echo $person->Name;</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

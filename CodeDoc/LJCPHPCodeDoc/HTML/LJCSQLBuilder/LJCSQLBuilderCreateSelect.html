@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCSQLBuilderCreateSelect.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>CreateSelect</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCDataManagerLib.html'>LJCDataManagerLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCSQLBuilder.html'>LJCSQLBuilder</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function CreateSelect</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$tableName - The table name.</div>
+	<div class='Text'>$schemaColumns - The table schema definition columns.</div>
+	<div class='Text'>$keyColumns - The where clause key columns.</div>
+	<div class='Text'>$propertyNames - The included column property names.</div>
+	<div class='Text'>$joins - The Collection of Join objects.</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		The Select SQL statement.
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public static function CreateSelect(string $tableName<br />, LJCDbColumns $schemaColumns, ?LJCDbColumns $keyColumns<br />, array $propertyNames = null, ?LJCJoins $joins = null) : string
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Creates a Select SQL statement.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCDataManagerLib.php";
+require_once "$webCommonPath/LJCDBAccessLib.php";
+
+$schemaColumns = new LJCDbColumns();
+$schemaColumns->Add("ID", null, "int");
+$schemaColumns->Add("Name");
+
+$keyColumns = new LJCDbColumns();
+$keyColumns->Add("ID", value:1);
+
+array $propertyNames = [];
+$propertyNames[] = "ID";
+$propertyNames[] = "Name";
+
+$joins = new LJCJoins();
+$join = $joins->Add("JoinTableName");
+$join->JoinOns->Add("FromColumnName", "ToColumnName");
+$join->Columns->Add("JoinColumnName", "PropertyName", "ResultName");
+
+$sql = LJCSQLBuilder::CreateSelect("TableName", $schemaColumns
+  , $keyColumns, $propertyNames, $joins);
+
+// $sql =
+// select
+//   TableName.ID,
+//   TableName.Name
+//   JoinTableName.JoinColumnName as ResultName
+// from TableName;
+// left join JoinTableName
+//   on ((TableName.FromColumnName = JoinTableName.ToColumnName))
+// where TableName.ID = 1</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

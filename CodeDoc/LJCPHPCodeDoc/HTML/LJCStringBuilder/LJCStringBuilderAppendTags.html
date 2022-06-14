@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCStringBuilderAppendTags.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>AppendTags</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCTextLib.html'>LJCTextLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCStringBuilder.html'>LJCStringBuilder</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function AppendTags</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$tag - The tag value.</div>
+	<div class='Text'>$text - The text value.</div>
+	<div class='Text'>$indent - The number of tabs to add to the line beginning.</div>
+	<div class='Text'>$addBreak - Adds an HTML break before the cr/lf.</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public function AppendTags(string $tag, ?string $text, int $indent<br />, bool $addBreak = false)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Appends a text line with begin tag, end tag and indents.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCTextLib.php";
+
+$builder = new StringBuilder();
+$builder->AppendTags("First", "FirstValue", 0, true);
+$builder->AppendTags("Second", "SecondValue", 1, true);
+
+// $text =
+// &lt;First&gt;FirstValue&lt;/First&gt;&lt;br /&gt;
+//   &lt;Second&gt;SecondValue&lt;/Second&gt;&lt;br /&gt;
+$text = $builder->ToString();</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

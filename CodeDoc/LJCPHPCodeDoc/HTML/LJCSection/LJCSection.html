@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCSection.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LJCSection</title>
+	<meta charset='utf-8' />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
+	<meta name="description" content="PHP Class code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCGenTextSectionLib.html'>LJCGenTextSectionLib</a><br /></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Class LJCSection</div>
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						class LJCSection
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Represents a template Section.
+	</div>
+	<br />
+	<div class='Text'>Remarks</div>
+	<br />
+	<div class='Text'>
+		A Section identifies a section of text for which there can be one or more items. <p> The text within the Section will be generated once for each Item identified in the XMLData file. The Replacements for the current Item are applied to the text. </p> A Section can appear within another Section but must not cross Section borders. The active Replacements will be for the current Item and the parent tree current Items. That is for all current Items in which the current section is enclosed.
+	</div>
+	<br />
+	<div id='Title'>Public Functions</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCSectionconstruct.html'>construct</a></td>
+			<td class='ListTable'>
+				Initializes an object instance.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCSectionClone.html'>Clone</a></td>
+			<td class='ListTable'>
+				Creates a copy of the current object.
+			</td>
+		</tr>
+	</table>
+	<div class='Text'>2 Functions</div>
+	<br />
+	<div id='Title'>Public Properties</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCSection$Begin.html'>$Begin</a></td>
+			<td class='ListTable'>
+				The Section begin stream offset.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCSection$CurrentItem.html'>$CurrentItem</a></td>
+			<td class='ListTable'>
+				The Current Item object.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCSection$Items.html'>$Items</a></td>
+			<td class='ListTable'>
+				The Section Items.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCSection$Name.html'>$Name</a></td>
+			<td class='ListTable'>
+				The Section name.
+			</td>
+		</tr>
+	</table>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>

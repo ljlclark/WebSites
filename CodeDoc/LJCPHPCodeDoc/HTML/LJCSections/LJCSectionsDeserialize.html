@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
+<!-- LJCSectionsDeserialize.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Deserialize</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lester J. Clark" />
+	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
+	<meta name="description" content="PHP Function code documentation." />
+	<meta name="viewport" content="width=device-width" , initial-scale=1 />
+	<link rel='stylesheet' type='text/css' href='../../../CSS/CodeDoc.css' />
+</head>
+<body>
+	<div id='Title'>File - <a href='../LJCGenTextSectionLib.html'>LJCGenTextSectionLib</a><br /></div>
+	<br />
+	<div id='Title'>Class - <a href='LJCSections.html'>LJCSections</a></div>
+	<br />
+	<div id='Header'>
+		<div id='Title'>Function Deserialize</div>
+	</div>
+	<br />
+	<div id='Title'>Parameters</div>
+	<div class='Text'>$xmlFileSpec - The source XML file specification.</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		The Sections object.
+	</div>
+	<br />
+	<div class='Text'>Syntax</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						public static function Deserialize(string $xmlFileSpec) : LJCSections
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='Text'>
+		Deserializes the data from a Sections XML file.
+	</div>
+	<br />
+	<div class='Text'>Example</div>
+	<br />
+	<div class='SectionContainer'>
+		<table class='CodeTable'>
+			<tbody>
+				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
+				<tr class='CodeTable'>
+					<td class='CodeTable'>
+						<pre style='margin-left: 2px;'>
+&lt;Data xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+ xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'&gt;
+  &lt;Sections&gt;
+    &lt;Section&gt;
+      &lt;Begin/&gt;
+      &lt;Name&gt;Main&lt;/Name&gt;
+      &lt;Items&gt;
+        &lt;Item&gt;
+          &lt;Replacements&gt;
+            &lt;Replacement&gt;
+              &lt;Name&gt;_FileSummary_&lt;/Name&gt;
+              &lt;Value&gt;This is the file summary text.&lt;/Value&gt;
+            &lt;/Replacement&gt;
+            &lt;Replacement&gt;
+              &lt;Name&gt;_FileName_&lt;/Name&gt;
+              &lt;Value&gt;LJCLib&lt;/Value&gt;
+            &lt;/Replacement&gt;
+          &lt;/Replacements&gt;
+        &lt;/Item&gt;
+      &lt;/Items&gt;
+    &lt;/Section&gt;
+  &lt;/Sections&gt;
+&lt;/Data&gt;
+
+$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+require_once "$webCommonPath/LJCGenTextSectionLib.php";
+
+// $sections is an LJCSections object.
+$sections = LJCSections::Deserialize("Sections.xml");</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br />
+	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
+</body>
+</html>
