@@ -85,7 +85,6 @@ class CNavEvents
 		// - Client
 		this.NavItems.Add("Client", "HTML/LJCDBClientLib/LJCDBClientLib.html");
 		this.NavItems.Add("Message", "HTML/LJCDBMessage/LJCDBMessage.html");
-		this.NavItems.Add("Cipher", "HTML/CipherLib/CipherLib.html");
 		this.NavItems.Add("Key", "HTML/ForeignKeyManagerTest/ForeignKeyManagerTest.html");
 		this.NavItems.Add("SQLUtil", "HTML/LJCSQLUtilLib/LJCSQLUtilLib.html");
 		this.NavItems.Add("SQLUtilDAL", "HTML/LJCSQLUtilLibDAL/LJCSQLUtilLibDAL.html");

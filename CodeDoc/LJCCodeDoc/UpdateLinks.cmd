@@ -126,6 +126,12 @@ copy %root%%src%\ProductTables.html %to%
 copy %root%%src%\ProductTables.jpg %to%
 
 rem ---------------
+set src=\LJCSQLUtilLib\LJCSQLUtilLib\LinkPages
+set to=HTML\LJCSQLUtilLib
+copy %root%%src%\MetaDataTables.html %to%
+copy %root%%src%\MetaDataTables.jpg %to%
+
+rem ---------------
 set src=\LJCViewEditor\LJCViewEditor\LinkPages
 set to=HTML\LJCViewEditor
 copy %root%%src%\ViewDataTables.html %to%
