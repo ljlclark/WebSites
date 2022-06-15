@@ -1,4 +1,4 @@
-set root=..\LJCProjects
+set root=..\..\..\LJCProjects
 
 rem ---------------
 set src=\GenealogyManager\GenealogyManager\LinkPages
@@ -17,6 +17,12 @@ set src=\LJCDataAccess\LJCDataAccess\Diagrams
 set to=HTML\LJCDataAccess
 copy %root%%src%\DataAccessLink.html %to%
 copy %root%%src%\DataAccessLink.jpg %to%
+
+rem ---------------
+set src=\LJCDataAccessConfig\LJCDataAccessConfig\Diagrams
+set to=HTML\LJCDataAccessConfig
+copy %root%%src%\DataAccessConfig.html %to%
+copy %root%%src%\DataAccessConfig.jpg %to%
 
 rem ---------------
 set src=\LJCDataTransform\LJCTransformManager\LinkPages
@@ -53,7 +59,6 @@ copy %root%%src%\DbMessageGraph.jpg %to%
 
 rem ---------------
 set src=\LJCDBServiceLib\LJCDBDataAccessLib\Diagrams
-rem set to=HTML\LJCDBServiceLib
 set to=HTML\LJCDBDataAccessLib
 copy %root%%src%\DbAccessConfig.html %to%
 copy %root%%src%\DbAccessConfig.jpg %to%
@@ -74,6 +79,10 @@ copy %root%%src%\GenRootToMethod.jpg %to%
 copy %root%%src%\GenPropertyToField.html %to%
 copy %root%%src%\GenPropertyToField.jpg %to%
 
+set src=\LJCDocLib\LJCDocGenLib\CreateXML
+copy %root%%src%\DocLibDataGraph.jpg %to%
+copy %root%%src%\DocLibXMLGraph.jpg %to%
+
 set src=\LJCDocLib\LJCDocObjLib\Diagrams
 set to=HTML\LJCDocObjLib
 copy %root%%src%\DataRootToMethod.html %to%
@@ -81,16 +90,10 @@ copy %root%%src%\DataRootToMethod.jpg %to%
 copy %root%%src%\DataPropertyToExample.html %to%
 copy %root%%src%\DataPropertyToExample.jpg %to%
 
-set src=\LJCDocLib\LJCDocGenLib\CreateXML
-copy %root%%src%\DocLibDataGraph.jpg %to%
-
 set src=\LJCDocLib\LJCDocXMLObjLib\Diagrams
 set to=HTML\LJCDocXMLObjLib
 copy %root%%src%\DocXML.html %to%
 copy %root%%src%\DocXML.jpg %to%
-
-set src=\LJCDocLib\LJCDocGenLib\CreateXML
-copy %root%%src%\DocLibXMLGraph.jpg %to%
 
 rem ---------------
 set src=\LJCFacilityManager\LJCFacilityManager\LinkPages
@@ -115,11 +118,11 @@ copy %root%%src%\RegionTables.html %to%
 copy %root%%src%\RegionTables.jpg %to%
 
 rem ---------------
-set src=\LJCSalesManager\LJCSalesManager\LinkPages
+set src=\LJCSales\LJCSalesManager\LinkPages
 set to=HTML\LJCSalesManager
 copy %root%%src%\OrderTables.html %to%
-copy %root%%src%\OrderTables.html %to%
-copy %root%%src%\ProductTables.jpg %to%
+copy %root%%src%\OrderTables.jpg %to%
+copy %root%%src%\ProductTables.html %to%
 copy %root%%src%\ProductTables.jpg %to%
 
 rem ---------------
