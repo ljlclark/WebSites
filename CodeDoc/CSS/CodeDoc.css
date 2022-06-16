@@ -10,8 +10,8 @@ body {
 
 /* Type/Class Selectors */
 div.SectionContainer {
-	padding-right: 17px;
 	padding-left: 17px;
+	padding-right: 17px;
 }
 
 div.SmallText {
@@ -32,6 +32,15 @@ div.Text3 {
 	padding-left: 45px;
 }
 
+div.PathText {
+	color: #003399;
+	font-family: Verdana, Tahoma, Arial, Sans-Serif;
+	font-size: 9pt;
+	/*font-weight: bold;*/
+	padding-left: 15px;
+	padding-top: 5px;
+}
+
 div.RedText {
 	color: red;
 	padding-left: 15px;
@@ -47,9 +56,9 @@ table.ListTable {
 	font-family: Courier New, Monospace;
 	font-size: 9pt;
 	margin-bottom: 0px;
-	padding-top: 5px;
 	padding-bottom: 5px;
 	padding-left: 15px;
+	padding-top: 5px;
 	width: 100%;
 }
 
@@ -57,10 +66,10 @@ td.CodeTable {
 	background-color: #f7f7ff;
 	border-bottom: solid #d5d5d3 1px;
 	color: #000066;
-	padding-top: 5px;
-	padding-right: 10px;
 	padding-bottom: 5px;
 	padding-left: 5px;
+	padding-right: 10px;
+	padding-top: 5px;
 	text-align: left;
 }
 
@@ -68,16 +77,16 @@ td.ListTable {
 	background-color: #f7f7ff;
 	border-bottom: solid #d5d5d3 1px;
 	color: #000066;
-	padding-top: 2px;
 	padding-bottom: 2px;
+	padding-top: 2px;
 }
 
 td.ListTableMissing {
 	background-color: #f7f7ff;
 	border-bottom: solid #d5d5d3 1px;
 	color: red;
-	padding-top: 2px;
 	padding-bottom: 2px;
+	padding-top: 2px;
 }
 
 th.CodeTable {
@@ -87,10 +96,10 @@ th.CodeTable {
 	font-family: Verdana, Tahoma, Arial, Sans-Serif;
 	font-size: 8pt;
 	font-weight: bold;
-	padding-top: 1px;
-	padding-right: 5px;
 	padding-bottom: 1px;
 	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 1px;
 	text-align: left;
 }
 
@@ -108,8 +117,8 @@ div#Title {
 	font-family: Verdana, Tahoma, Arial, Sans-Serif;
 	font-size: 9pt;
 	font-weight: bold;
-	padding-top: 5px;
 	padding-left: 15px;
+	padding-top: 5px;
 }
 
 /* Class Selectors */

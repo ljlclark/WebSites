@@ -28,6 +28,7 @@ class NavEvents
 	{
 		let srcElement = event.target;
 		if ("navGroup" == srcElement.className
+			|| "navItemGroup" == srcElement.className
 			|| "navItem" == srcElement.className)
 		{
 			let navItem = this.NavItems.SearchName(srcElement.id);

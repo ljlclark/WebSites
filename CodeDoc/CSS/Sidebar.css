@@ -16,16 +16,16 @@ ul {
 }
 
 /* Class Selectors */
-.caption2 {
-	margin-top: 3px;
-}
-
 .navFirst {
 	padding-top: 7px;
 }
 
 .navGroup {
 	padding-bottom: 4px;
+}
+
+.navItemGroup {
+	margin-top: 3px;
 }
 
 .navItem {
@@ -58,6 +58,6 @@ ul {
 }
 
 	/* ID/Class Selectors */
-	#sidebar .navGroup:hover, .navItem:hover {
+	#sidebar .navGroup:hover, .navItemGroup:hover, .navItem:hover {
 		background-color: aliceblue;
 	}

@@ -79,10 +79,6 @@ copy %root%%src%\GenRootToMethod.jpg %to%
 copy %root%%src%\GenPropertyToField.html %to%
 copy %root%%src%\GenPropertyToField.jpg %to%
 
-set src=\LJCDocLib\LJCDocGenLib\CreateXML
-copy %root%%src%\DocLibDataGraph.jpg %to%
-copy %root%%src%\DocLibXMLGraph.jpg %to%
-
 set src=\LJCDocLib\LJCDocObjLib\Diagrams
 set to=HTML\LJCDocObjLib
 copy %root%%src%\DataRootToMethod.html %to%
@@ -90,10 +86,16 @@ copy %root%%src%\DataRootToMethod.jpg %to%
 copy %root%%src%\DataPropertyToExample.html %to%
 copy %root%%src%\DataPropertyToExample.jpg %to%
 
+set src=\LJCDocLib\LJCDocGenLib\CreateXML
+copy %root%%src%\DocLibDataGraph.jpg %to%
+
 set src=\LJCDocLib\LJCDocXMLObjLib\Diagrams
 set to=HTML\LJCDocXMLObjLib
 copy %root%%src%\DocXML.html %to%
 copy %root%%src%\DocXML.jpg %to%
+
+set src=\LJCDocLib\LJCDocGenLib\CreateXML
+copy %root%%src%\DocLibXMLGraph.jpg %to%
 
 rem ---------------
 set src=\LJCFacilityManager\LJCFacilityManager\LinkPages
