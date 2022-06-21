@@ -45,7 +45,40 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		The GenData XML files  provide the  data for GenTextLib-LJCGenText to generate CodeDoc HTML  files. <p> The GenData XML is intended to display the XML Comments based on the Text Template that will be used. </p> <p> The Text Section and Replacement names must match  those expected by the Template. </p> <p> The number and names of sections, items and replacements depends on the GenData from the PHP files and the requirements of the HTML Template. </p> This is the standard layout for the GenData XML files. <pre> &lt;Data xmlns:xsd="http://www.w3.org/2001/XMLSchema"<br />  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;<br />   &lt;Sections&gt;<br />     &lt;Section&gt;<br />       &lt;Begin/&gt;<br />       &lt;Name&gt;Main&lt;/Name&gt;<br />       &lt;Items&gt;<br />         &lt;Item&gt;<br />           &lt;Replacements&gt;<br />             &lt;Replacement&gt;<br />               &lt;Name&gt;&lt;/Name&gt;<br />               &lt;Value&gt;&lt;/Value&gt;<br />             &lt;Replacement&gt;<br />           &lt;Replacements&gt;<br />         &lt;Item&gt;<br />       &lt;Items&gt;<br />     &lt;Section&gt;<br />   &lt;Sections&gt;<br /> &lt;/Data&gt;</pre>
+		The GenData XML files  provide the  data for GenTextLib-LJCGenText to
+ generate CodeDoc HTML  files.
+ <p>
+ The GenData XML is intended to display the XML Comments based on the Text
+ Template that will be used.
+ </p>
+ <p>
+ The Text Section and Replacement names must
+ match  those expected by the Template.
+ </p>
+ <p>
+ The number and names of sections, items and replacements depends on the GenData
+ from the PHP files and the requirements of the HTML Template.
+ </p>
+ This is the standard layout for the GenData XML files.
+ <pre> &lt;Data xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+   &lt;Sections&gt;
+     &lt;Section&gt;
+       &lt;Begin/&gt;
+       &lt;Name&gt;Main&lt;/Name&gt;
+       &lt;Items&gt;
+         &lt;Item&gt;
+           &lt;Replacements&gt;
+             &lt;Replacement&gt;
+               &lt;Name&gt;&lt;/Name&gt;
+               &lt;Value&gt;&lt;/Value&gt;
+             &lt;Replacement&gt;
+           &lt;Replacements&gt;
+         &lt;Item&gt;
+       &lt;Items&gt;
+     &lt;Section&gt;
+   &lt;Sections&gt;
+ &lt;/Data&gt;</pre>
 	</div>
 	<br />
 	<div id='Title'>Public Functions</div>
@@ -62,14 +95,8 @@
 				Creates a Lib GenData XML string and optional file.
 			</td>
 		</tr>
-		<tr>
-			<td class='ListTable' width='25%'><a href='LJCGenDataGenCreateMethodParamString.html'>CreateMethodParamString</a></td>
-			<td class='ListTable'>
-				Creates a Method Params section GenData XML string.
-			</td>
-		</tr>
 	</table>
-	<div class='Text'>3 Functions</div>
+	<div class='Text'>2 Functions</div>
 	<br />
 	<div id='Title'>Public Properties</div>
 	<table class='ListTable'>

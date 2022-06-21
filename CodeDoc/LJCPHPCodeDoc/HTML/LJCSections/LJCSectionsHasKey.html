@@ -61,19 +61,19 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCGenTextSectionLib.php";
-
-$sections = new LJCSections();
-$key = "SectionName";
-if ($sections->HasKey($key))
-{
-  throw new Exception("Key: {$key} already in use.");
-}
-else
-{
-  $section = new LJCSection($key);
-}</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCGenTextSectionLib.php";
+ 
+ $sections = new LJCSections();
+ $key = "SectionName";
+ if ($sections->HasKey($key))
+ {
+   throw new Exception("Key: {$key} already in use.");
+ }
+ else
+ {
+   $section = new LJCSection($key);
+ }</pre>
 					</td>
 				</tr>
 			</tbody>

@@ -58,13 +58,13 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$devPath = "c:/Users/Les/Documents/Visual Studio 2022/LJCPHPProjects";
+ $devPath = "c:/Users/Les/Documents/Visual Studio 2022/LJCPHPProjects";
  require_once "$devPath/GenDoc/GenDataLib/LJCGenDataGenLib.php";
  require_once "$devPath/GenDoc/GenDataLib/LJCGenDataGenLib.php";
-
+ 
  $docDataGen = new LJCDocDataGen();
  $genDataGen = new LJCGenDAtaGen();
-
+ 
  $fileSpec = "SourceFile.php";
  $docXMLString = $this->DocDataGen->CreateDocXMLString($fileSpec);
  $genXMLString = $this->GenDataGen->CreateLibXMLString($docXMLString

@@ -61,35 +61,35 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-&lt;Data xmlns:xsd='http://www.w3.org/2001/XMLSchema'
- xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'&gt;
-  &lt;Sections&gt;
-    &lt;Section&gt;
-      &lt;Begin/&gt;
-      &lt;Name&gt;Main&lt;/Name&gt;
-      &lt;Items&gt;
-        &lt;Item&gt;
-          &lt;Replacements&gt;
-            &lt;Replacement&gt;
-              &lt;Name&gt;_FileSummary_&lt;/Name&gt;
-              &lt;Value&gt;This is the file summary text.&lt;/Value&gt;
-            &lt;/Replacement&gt;
-            &lt;Replacement&gt;
-              &lt;Name&gt;_FileName_&lt;/Name&gt;
-              &lt;Value&gt;LJCLib&lt;/Value&gt;
-            &lt;/Replacement&gt;
-          &lt;/Replacements&gt;
-        &lt;/Item&gt;
-      &lt;/Items&gt;
-    &lt;/Section&gt;
-  &lt;/Sections&gt;
-&lt;/Data&gt;
-
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCGenTextSectionLib.php";
-
-// $sections is an LJCSections object.
-$sections = LJCSections::Deserialize("Sections.xml");</pre>
+ &lt;Data xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'&gt;
+   &lt;Sections&gt;
+     &lt;Section&gt;
+       &lt;Begin/&gt;
+       &lt;Name&gt;Main&lt;/Name&gt;
+       &lt;Items&gt;
+         &lt;Item&gt;
+           &lt;Replacements&gt;
+             &lt;Replacement&gt;
+               &lt;Name&gt;_FileSummary_&lt;/Name&gt;
+               &lt;Value&gt;This is the file summary text.&lt;/Value&gt;
+             &lt;/Replacement&gt;
+             &lt;Replacement&gt;
+               &lt;Name&gt;_FileName_&lt;/Name&gt;
+               &lt;Value&gt;LJCLib&lt;/Value&gt;
+             &lt;/Replacement&gt;
+           &lt;/Replacements&gt;
+         &lt;/Item&gt;
+       &lt;/Items&gt;
+     &lt;/Section&gt;
+   &lt;/Sections&gt;
+ &lt;/Data&gt;
+ 
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCGenTextSectionLib.php";
+ 
+ // $sections is an LJCSections object.
+ $sections = LJCSections::Deserialize("Sections.xml");</pre>
 					</td>
 				</tr>
 			</tbody>

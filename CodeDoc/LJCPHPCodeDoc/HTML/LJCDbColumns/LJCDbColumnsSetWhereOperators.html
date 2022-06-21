@@ -57,15 +57,15 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-$dbColumns = new LJCDbColumns();
-$dbColumns->Add("Name", value: "%C%");
-
-// $compareOperator - Any valid comparison operator; defaults to "=".
-// $boolOperator - "and" or "or"; defaults to "and".
-$dbColumns->SetWhereOperators("Name", "like", "or");</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ $dbColumns = new LJCDbColumns();
+ $dbColumns->Add("Name", value: "%C%");
+ 
+ // $compareOperator - Any valid comparison operator; defaults to "=".
+ // $boolOperator - "and" or "or"; defaults to "and".
+ $dbColumns->SetWhereOperators("Name", "like", "or");</pre>
 					</td>
 				</tr>
 			</tbody>

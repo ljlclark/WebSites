@@ -62,21 +62,21 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDataManagerLib.php";
-
-$joins = new LJCJoins();
-$join = $joins->Add("JoinTableName");
-$join->JoinOns->Add("FromColumnName", "ToColumnName");
-$join->Columns->Add("JoinColumnName", "PropertyName", "ResultName");
-
-$tableName = "TableName";
-$schemaColumns = $dataManager->SchemaColumns;
-$sql = "select\r\n";
-$sql .= LJCSQLBuilder::SQLColumns($tableName, $schemaColumns
-  , joins: $joins);
-$sql .= "from $tableName \r\n";
-$sql .= LJCSQLBuilder::GetJoinStatement($tableName, $joins);</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDataManagerLib.php";
+ 
+ $joins = new LJCJoins();
+ $join = $joins->Add("JoinTableName");
+ $join->JoinOns->Add("FromColumnName", "ToColumnName");
+ $join->Columns->Add("JoinColumnName", "PropertyName", "ResultName");
+ 
+ $tableName = "TableName";
+ $schemaColumns = $dataManager->SchemaColumns;
+ $sql = "select\r\n";
+ $sql .= LJCSQLBuilder::SQLColumns($tableName, $schemaColumns
+   , joins: $joins);
+ $sql .= "from $tableName \r\n";
+ $sql .= LJCSQLBuilder::GetJoinStatement($tableName, $joins);</pre>
 					</td>
 				</tr>
 			</tbody>

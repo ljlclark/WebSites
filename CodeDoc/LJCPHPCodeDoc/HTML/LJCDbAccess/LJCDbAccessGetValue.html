@@ -68,17 +68,17 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-// See constructor for how to create $connectionValues.
-$dbAccess = new LJCDbAccess($connectionValues);
-
-$tableName = "TableName";
-$sql = "select ID, Name from $tableName where ID = 1";
-$row = $dbAccess->Retrieve($sql);
-$id = LJCDbAccess::GetValue($row, "ID");
-$name = LJCDbAccess::GetValue($row, "Name");</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ // See constructor for how to create $connectionValues.
+ $dbAccess = new LJCDbAccess($connectionValues);
+ 
+ $tableName = "TableName";
+ $sql = "select ID, Name from $tableName where ID = 1";
+ $row = $dbAccess->Retrieve($sql);
+ $id = LJCDbAccess::GetValue($row, "ID");
+ $name = LJCDbAccess::GetValue($row, "Name");</pre>
 					</td>
 				</tr>
 			</tbody>

@@ -56,7 +56,14 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		Retrieves a single record from the database. <p> The $keyColumns collection parameter contains the data for the where clause. </p> The optional $propertyNames array parameter contains the names of the properties that will be retrieved. All columns are retrieved if it is null.
+		Retrieves a single record from the database.
+ <p>
+ The $keyColumns collection parameter contains the data for the where
+ clause.
+ </p>
+ The optional $propertyNames array parameter contains the names of the
+ properties that will be retrieved. All columns are retrieved if it is
+ null.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -68,28 +75,28 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDataManagerLib.php";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-// See constructor for how to create $connectionValues.
-$tableName = "TableName";
-$manager = new LJCDataManager($connectionValues, $tableName);
-
-$keyColumns = new DbColumns();
-$keyColumns->Add("ID", value:1);
-
-$propertyNames = [];
-$propertyNames[] = "ID";
-$propertyNames[] = "Name";
-$row = $manager->Retrieve($keyColumns, $propertyNames);
-
-// $manager->SQL =
-// select
-//   TableName.ID,
-//   TableName.Name
-// from TableName
-// where TableName.ID = 1;</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDataManagerLib.php";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ // See constructor for how to create $connectionValues.
+ $tableName = "TableName";
+ $manager = new LJCDataManager($connectionValues, $tableName);
+ 
+ $keyColumns = new DbColumns();
+ $keyColumns->Add("ID", value:1);
+ 
+ $propertyNames = [];
+ $propertyNames[] = "ID";
+ $propertyNames[] = "Name";
+ $row = $manager->Retrieve($keyColumns, $propertyNames);
+ 
+ // $manager->SQL =
+ // select
+ //   TableName.ID,
+ //   TableName.Name
+ // from TableName
+ // where TableName.ID = 1;</pre>
 					</td>
 				</tr>
 			</tbody>

@@ -62,20 +62,20 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCCollectionLib.php";
-
-// Add to class that extends LJCCollectionBase
-// Adds an object and key value.
-public function AddObject(ObjectItem $item, $key = null)
-{
-  if (null == $key)
-  {
-    $key = $item->Name;
-  }
-  $retValue = $this-><b>AddItem</b>($item, $key);
-  return $retValue;
-}</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCCollectionLib.php";
+ 
+ // Add to class that extends LJCCollectionBase
+ // Adds an object and key value.
+ public function AddObject(ObjectItem $item, $key = null)
+ {
+   if (null == $key)
+   {
+     $key = $item->Name;
+   }
+   $retValue = $this-><b>AddItem</b>($item, $key);
+   return $retValue;
+ }</pre>
 					</td>
 				</tr>
 			</tbody>

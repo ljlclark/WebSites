@@ -59,7 +59,11 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		Returns null if the begin delimiter is not found. <br /> <br /> Includes to the end of the string if the end delimiter is null or not found.
+		Returns null if the begin delimiter is not found.
+ <br />
+ <br />
+ Includes to the end of the string if the end delimiter is null
+ or not found.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -71,11 +75,11 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCCommonLib.php";
-
-// $text = "here"
-$text = LJCCommon::GetDelimitedString("This | here |.", "|", "|");</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCCommonLib.php";
+ 
+ // $text = "here"
+ $text = LJCCommon::GetDelimitedString("This | here |.", "|", "|");</pre>
 					</td>
 				</tr>
 			</tbody>

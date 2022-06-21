@@ -56,7 +56,14 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		This function takes a folder name and a file name. It makes sure the folder exists and returns the text "folder/fileName$index" with the extension "txt". <br /> <br /> The variable $index in the example file name indicates a unique index value that does not already exist on disk. It begins checking with an index value of 1.
+		This function takes a folder name and a file name. It makes sure the
+ folder exists and returns the text "folder/fileName$index" with the
+ extension "txt".
+ <br />
+ <br />
+ The variable $index in the example file name indicates a unique index
+ value that does not already exist on disk. It begins checking with an
+ index value of 1.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -68,12 +75,12 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCCommonLib.php";
-
-// $debugFileSpec = "Debug\SourceFile1.txt"
-$debugFileSpec = LJCCommon::GetIndexedDebugFileName("Debug"
-  , "SourceFile.php");</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCCommonLib.php";
+ 
+ // $debugFileSpec = "Debug\SourceFile1.txt"
+ $debugFileSpec = LJCCommon::GetIndexedDebugFileName("Debug"
+   , "SourceFile.php");</pre>
 					</td>
 				</tr>
 			</tbody>

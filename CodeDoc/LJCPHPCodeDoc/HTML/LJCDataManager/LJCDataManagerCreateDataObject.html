@@ -56,7 +56,13 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		This method provides Object to Relational Mapping (ORM) as it maps the data columns to properties in the DataObject and copies the matching values. <br /> <br /> The data column keys which are the result set column names must match property names in the DataObject.
+		This method provides Object to Relational Mapping (ORM) as it maps the
+ data columns to properties in the DataObject and copies the matching
+ values.
+ <br />
+ <br />
+ The data column keys which are the result set column names must match
+ property names in the DataObject.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -68,26 +74,26 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-// See constructor for how to create $connectionValues.
-$manager = new LJCDataManager($connectionValues, "TableName");
-
-class Person
-{
-  public int $ID;
-  public ?string $Name;
-}
-
-$keyColumns = new LJCDbColumns();
-$keyColumns->Add("ID", value: 1);
-$row = $manager->Retrieve($keyColumns);
-
-$dataObject = new Person();
-$person = $manager->CreateDataObject($dataObject, $row);
-echo $person->ID;
-echo $person->Name;</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ // See constructor for how to create $connectionValues.
+ $manager = new LJCDataManager($connectionValues, "TableName");
+ 
+ class Person
+ {
+   public int $ID;
+   public ?string $Name;
+ }
+ 
+ $keyColumns = new LJCDbColumns();
+ $keyColumns->Add("ID", value: 1);
+ $row = $manager->Retrieve($keyColumns);
+ 
+ $dataObject = new Person();
+ $person = $manager->CreateDataObject($dataObject, $row);
+ echo $person->ID;
+ echo $person->Name;</pre>
 					</td>
 				</tr>
 			</tbody>

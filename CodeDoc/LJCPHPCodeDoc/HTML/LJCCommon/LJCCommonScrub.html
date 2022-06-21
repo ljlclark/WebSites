@@ -55,7 +55,8 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		Trims the text, strips slashes and converts HTML characters to HTML entities.
+		Trims the text, strips slashes and converts HTML characters to HTML
+ entities.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -67,11 +68,11 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCCommonLib.php";
-
-// $text = "&amp;lt;tag&amp;gt;"
-$text = LJCCommon::Scrub(" &lt;/tag&gt; ");</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCCommonLib.php";
+ 
+ // $text = "&amp;lt;tag&amp;gt;"
+ $text = LJCCommon::Scrub(" &lt;/tag&gt; ");</pre>
 					</td>
 				</tr>
 			</tbody>

@@ -55,7 +55,13 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		The Delete() method deletes records in the database. <p> The $keyColumns collection parameter contains the data for the where clause. </p> The $keyColumns parameter is required and must have collection elements or the Delete will not be executed.
+		The Delete() method deletes records in the database.
+ <p>
+ The $keyColumns collection parameter contains the data for the where
+ clause.
+ </p>
+ The $keyColumns parameter is required and must have collection elements
+ or the Delete will not be executed.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -67,21 +73,21 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDataManagerLib.php";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-// See constructor for how to create $connectionValues.
-$tableName = "TableName";
-$manager = new LJCDataManager($connectionValues, $tableName);
-
-$keyColumns = new DbColumns();
-$keyColumns->Add("ID", value:1);
-$affectedCount = $manager->Delete($keyColumns);
-
-// $manager->SQL =
-// delete from TableName
-// where TableName.ID = 1;</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDataManagerLib.php";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ // See constructor for how to create $connectionValues.
+ $tableName = "TableName";
+ $manager = new LJCDataManager($connectionValues, $tableName);
+ 
+ $keyColumns = new DbColumns();
+ $keyColumns->Add("ID", value:1);
+ $affectedCount = $manager->Delete($keyColumns);
+ 
+ // $manager->SQL =
+ // delete from TableName
+ // where TableName.ID = 1;</pre>
 					</td>
 				</tr>
 			</tbody>

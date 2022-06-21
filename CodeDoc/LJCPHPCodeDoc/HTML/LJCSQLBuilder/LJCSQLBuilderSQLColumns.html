@@ -64,25 +64,25 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDataManagerLib.php";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-$joins = new LJCJoins();
-$join = $joins->Add("JoinTableName");
-$join->JoinOns->Add("FromColumnName", "ToColumnName");
-$join->Columns->Add("JoinColumnName", "PropertyName", "ResultName");
-
-$tableName = "TableName";
-$dbColumns = new DbColumns();
-$dbColumns->Add("ID", dataTypeName: "int");
-$dbColumns->Add("Name");
-$columns = LJCSQLBuilder::SQLColumns($tableName, $dbColumns, $joins);
-
-// $columns =
-//  TableName.ID,
-//  TableName.Name,
-//  JoinTableName.JoinColumnName as ResultName</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDataManagerLib.php";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ $joins = new LJCJoins();
+ $join = $joins->Add("JoinTableName");
+ $join->JoinOns->Add("FromColumnName", "ToColumnName");
+ $join->Columns->Add("JoinColumnName", "PropertyName", "ResultName");
+ 
+ $tableName = "TableName";
+ $dbColumns = new DbColumns();
+ $dbColumns->Add("ID", dataTypeName: "int");
+ $dbColumns->Add("Name");
+ $columns = LJCSQLBuilder::SQLColumns($tableName, $dbColumns, $joins);
+ 
+ // $columns =
+ //  TableName.ID,
+ //  TableName.Name,
+ //  JoinTableName.JoinColumnName as ResultName</pre>
 					</td>
 				</tr>
 			</tbody>

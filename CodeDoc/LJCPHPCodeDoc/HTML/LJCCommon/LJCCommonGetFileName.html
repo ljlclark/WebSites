@@ -55,7 +55,10 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		Parses from the last "/" to the following ".". <br /> <br /> Includes to the end of the string if the "." is not found.
+		Parses from the last "/" to the following ".".
+ <br />
+ <br />
+ Includes to the end of the string if the "." is not found.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -67,11 +70,11 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCCommonLib.php";
-
-// $text = "File"
-$text = LJCCommon::GetFileName("../Folder/File.txt");</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCCommonLib.php";
+ 
+ // $text = "File"
+ $text = LJCCommon::GetFileName("../Folder/File.txt");</pre>
 					</td>
 				</tr>
 			</tbody>

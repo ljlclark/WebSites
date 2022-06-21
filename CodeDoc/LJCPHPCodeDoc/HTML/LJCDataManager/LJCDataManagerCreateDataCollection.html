@@ -57,7 +57,23 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		This method provides Object to Relational Mapping (ORM) as it maps an array  of data records into a collection of strongly  typed data objects. It calls the CreateDataObject() method for each data record and adds the resulting typed object to the strongly typed collection. <p> The collection must be an object that extends (inherits from) LJCCollectionLib.php class LJCCollectionBase and provides an AddObject method with the signature  AddObject(DataObject $item, $key = null); Where DataObject is a strongly typed Data Object. See LJCDbAccessLib.php class LJCDbColumns and LJCDbColumn for examples. </p> <p> The AddObject() method should supply a default key value or the method can be changed to require the programmer to enter it by removing the "= null" from the method signature. </p> The DataObject must supply a Clone() method.
+		This method provides Object to Relational Mapping (ORM) as it maps an
+ array  of data records into a collection of strongly  typed data objects.
+ It calls the CreateDataObject() method for each data record and adds the
+ resulting typed object to the strongly typed collection.
+ <p>
+ The collection must be an object that extends (inherits from)
+ LJCCollectionLib.php class LJCCollectionBase and provides an AddObject
+ method with the signature  AddObject(DataObject $item, $key = null); Where
+ DataObject is a strongly typed Data Object. See LJCDbAccessLib.php class
+ LJCDbColumns and LJCDbColumn for examples.
+ </p>
+ <p>
+ The AddObject() method should supply a default key value or the method can
+ be changed to require the programmer to enter it by removing the "= null"
+ from the method signature.
+ </p>
+ The DataObject must supply a Clone() method.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -69,26 +85,26 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDataManagerLib.php";
-
-// See constructor for how to create $connectionValues.
-$manager = new LJCDataManager($connectionValues, "TableName");
-
-class Person
-{
-  public int $ID;
-  public string $Name;
-}
-
-$rows = $manager->Load(null);
-$persons = $manager->CreateDataCollection(new Persons(), new Person()
-  , $rows);
-foreach ($persons as $person)
-{
-  echo $person->ID;
-  echo $person->Name;
-}</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDataManagerLib.php";
+ 
+ // See constructor for how to create $connectionValues.
+ $manager = new LJCDataManager($connectionValues, "TableName");
+ 
+ class Person
+ {
+   public int $ID;
+   public string $Name;
+ }
+ 
+ $rows = $manager->Load(null);
+ $persons = $manager->CreateDataCollection(new Persons(), new Person()
+   , $rows);
+ foreach ($persons as $person)
+ {
+   echo $person->ID;
+   echo $person->Name;
+ }</pre>
 					</td>
 				</tr>
 			</tbody>

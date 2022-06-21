@@ -58,7 +58,11 @@
 	<div class='Text'>Remarks</div>
 	<br />
 	<div class='Text'>
-		The integer -1 is returned if the search value is not found. <br /> <br /> This alternative for PHP strpos() always returns an integer. It can be simply tested for success $index >= 0 or failure $index < 0.
+		The integer -1 is returned if the search value is not found.
+ <br />
+ <br />
+ This alternative for PHP strpos() always returns an integer. It can be
+ simply tested for success $index >= 0 or failure $index < 0.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -70,14 +74,14 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCCommonLib.php";
-
-// $index = 5
-$index = LJCCommon::StrPos("This here.", "Here");
-
-// $index = -1
-$index = LJCCommon::StrPos("This here.", "Here", exact: true);</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCCommonLib.php";
+ 
+ // $index = 5
+ $index = LJCCommon::StrPos("This here.", "Here");
+ 
+ // $index = -1
+ $index = LJCCommon::StrPos("This here.", "Here", exact: true);</pre>
 					</td>
 				</tr>
 			</tbody>

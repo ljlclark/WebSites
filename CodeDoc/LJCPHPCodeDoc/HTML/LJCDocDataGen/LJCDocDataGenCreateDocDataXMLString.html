@@ -51,7 +51,7 @@
 	</div>
 	<br />
 	<div class='Text'>
-		Creates and writes the DocData XML.
+		Creates and optionally writes the DocData XML.
 	</div>
 	<br />
 	<div class='Text'>Example</div>
@@ -63,8 +63,8 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-require_once "LJCDocDataGenLib.php";
-
+ require_once "LJCDocDataGenLib.php";
+ 
  $docDataGen = new LJCDocDataGen();
  $xmlString = $docDataGen->CreateDocXMLString("SourceFile.php");</pre>
 					</td>

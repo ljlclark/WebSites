@@ -61,15 +61,15 @@
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
 						<pre style='margin-left: 2px;'>
-$webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
-require_once "$webCommonPath/LJCDBAccessLib.php";
-
-// See constructor for how to create $connectionValues.
-$dbAccess = new LJCDbAccess($connectionValues);
-
-$tableName = "TableName";
-$sql = "select * from $tableName";
-$rows = $dbAccess->Load($sql);</pre>
+ $webCommonPath = "c:/inetpub/wwwroot/LJCPHPCommon";
+ require_once "$webCommonPath/LJCDBAccessLib.php";
+ 
+ // See constructor for how to create $connectionValues.
+ $dbAccess = new LJCDbAccess($connectionValues);
+ 
+ $tableName = "TableName";
+ $sql = "select * from $tableName";
+ $rows = $dbAccess->Load($sql);</pre>
 					</td>
 				</tr>
 			</tbody>
