@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
-<!-- LJCDocDataFileSerializeToString.html -->
+<!-- LJCTextRangesClone.html -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>SerializeToString</title>
+	<title>Clone</title>
 	<meta charset="utf-8" />
 	<meta name="author" content="Lester J. Clark" />
 	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Function, PHP" />
@@ -15,13 +15,19 @@
 	<br />
 	<div class="PathText">
 		/<a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
-		/<a href="../LJCDocDataLib.html">LJCDocDataLib</a>
-		/<a href="LJCDocDataFile.html">LJCDocDataFile</a>
-		/SerializeToString
+		/<a href="../LJCTextRangesLib.html">LJCTextRangesLib</a>
+		/<a href="LJCTextRanges.html">LJCTextRanges</a>
+		/Clone
 	</div>
 	<br />
 	<div id='Header'>
-		<div id='Title'>Function SerializeToString</div>
+		<div id='Title'>Function Clone</div>
+	</div>
+	<br />
+	<div class='Text'>Returns</div>
+	<br />
+	<div class='Text'>
+		The cloned item.
 	</div>
 	<br />
 	<div class='Text'>Syntax</div>
@@ -32,7 +38,7 @@
 				<tr><th class='CodeTable'>PHP</th></tr>
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
-						public function SerializeToString($xmlFileName = null) : string
+						public function Clone() : self
 					</td>
 				</tr>
 			</tbody>
@@ -40,26 +46,7 @@
 	</div>
 	<br />
 	<div class='Text'>
-		_FunctionSummary_
-	</div>
-	<br />
-	<div class='Text'>Example</div>
-	<br />
-	<div class='SectionContainer'>
-		<table class='CodeTable'>
-			<tbody>
-				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
-				<tr class='CodeTable'>
-					<td class='CodeTable'>
-						<pre style='margin-left: 2px;'>
- require_once "LJCDocDataLib.php";
- 
- $docDataFile = LJCDocDataFile::Deserialize("DocData.xml");
- $xmlString = $docDataFile->SerializeToString();</pre>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		Creates an object clone.
 	</div>
 	<br />
 	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>

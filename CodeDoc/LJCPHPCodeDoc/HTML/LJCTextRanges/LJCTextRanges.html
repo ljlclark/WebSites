@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
 <!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
-<!-- LJCDbColumns.html -->
+<!-- LJCTextRanges.html -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>LJCDbColumns</title>
+	<title>LJCTextRanges</title>
 	<meta charset='utf-8' />
 	<meta name="author" content="Lester J. Clark" />
 	<meta name="keywords" content="LJCCodeDoc, CodeDoc, Class, PHP" />
@@ -15,12 +15,12 @@
 	<br />
 	<div class="PathText">
 		/<a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
-		/<a href="../LJCDBAccessLib.html">LJCDBAccessLib</a>
-		/LJCDbColumns
+		/<a href="../LJCTextRangesLib.html">LJCTextRangesLib</a>
+		/LJCTextRanges
 	</div>
 	<br />
 	<div id='Header'>
-		<div id='Title'>Class LJCDbColumns</div>
+		<div id='Title'>Class LJCTextRanges</div>
 	</div>
 	<br />
 	<div class='Text'>Syntax</div>
@@ -31,7 +31,7 @@
 				<tr><th class='CodeTable'>PHP</th></tr>
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
-						class LJCDbColumns
+						class LJCTextRanges
 					</td>
 				</tr>
 			</tbody>
@@ -39,74 +39,77 @@
 	</div>
 	<br />
 	<div class='Text'>
-		Represents a typed Collection of LJCDbColumn objects.
-	</div>
-	<br />
-	<div class='Text'>Remarks</div>
-	<br />
-	<div class='Text'>
-		It extends (inherits) from class LJCCollectionLib-LJCCollectionBase which
- provides the "foreach" and "count" functionality.
- <p>
- It includes an AddObject() method that requires the strongly typed
- LJCDbColumn object collection element. This is what makes the collection
- strongly typed.
- </p>
- The Get() method retrieves the internal array element by key.
+		Represents a collection of LJCTextRange objects.
 	</div>
 	<br />
 	<div id='Title'>Public Functions</div>
 	<table class='ListTable'>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsDeserialize.html'>Deserialize</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesconstruct.html'>construct</a></td>
 			<td class='ListTable'>
-				Deserializes the data from an LJCDbColumns XML file.
+				Initializes a class instance with the provided values.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsAdd.html'>Add</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesAdd.html'>Add</a></td>
 			<td class='ListTable'>
 				Creates an object and adds it to the collection.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsAddObject.html'>AddObject</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesAddObject.html'>AddObject</a></td>
 			<td class='ListTable'>
 				Adds an object and key value.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsClone.html'>Clone</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesClone.html'>Clone</a></td>
 			<td class='ListTable'>
 				Creates an object clone.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsGet.html'>Get</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesGet.html'>Get</a></td>
 			<td class='ListTable'>
 				Get the item by Key value.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsGetColumns.html'>GetColumns</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesIsInValue.html'>IsInValue</a></td>
 			<td class='ListTable'>
-				Get the column definitions that match the property names.
+				Determines if a delimiter is in a text value.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsMapNames.html'>MapNames</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesSetRanges.html'>SetRanges</a></td>
 			<td class='ListTable'>
-				Sets the PropertyName, RenameAs and Caption values for a column.
+				Sets value ranges and returns true if a range was defined.
 			</td>
 		</tr>
 		<tr>
-			<td class='ListTable' width='25%'><a href='LJCDbColumnsSetWhereOperators.html'>SetWhereOperators</a></td>
+			<td class='ListTable' width='25%'><a href='LJCTextRangesSplit.html'>Split</a></td>
 			<td class='ListTable'>
-				Sets the Where Clause operators.
+				Splits a line of text on the delimiters not enclosed in a value.
 			</td>
 		</tr>
 	</table>
 	<div class='Text'>8 Functions</div>
+	<br />
+	<div id='Title'>Public Properties</div>
+	<table class='ListTable'>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCTextRanges$FieldDelimiter.html'>$FieldDelimiter</a></td>
+			<td class='ListTable'>
+				The field delimiter.
+			</td>
+		</tr>
+		<tr>
+			<td class='ListTable' width='25%'><a href='LJCTextRanges$ValueDelimiter.html'>$ValueDelimiter</a></td>
+			<td class='ListTable'>
+				The text region delimiter.
+			</td>
+		</tr>
+	</table>
 	<br />
 	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
 </body>

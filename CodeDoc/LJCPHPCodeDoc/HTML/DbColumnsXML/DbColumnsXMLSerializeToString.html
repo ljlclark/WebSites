@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <!-- Copyright(c) Lester J. Clark 2022 - All Rights Reserved -->
-<!-- LJCDocDataFileSerializeToString.html -->
+<!-- DbColumnsXMLSerializeToString.html -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>SerializeToString</title>
@@ -15,8 +15,8 @@
 	<br />
 	<div class="PathText">
 		/<a href="../../LJCPHPCodeDoc.html#GenCodeDocLib">LJCPHPCodeDoc</a>
-		/<a href="../LJCDocDataLib.html">LJCDocDataLib</a>
-		/<a href="LJCDocDataFile.html">LJCDocDataFile</a>
+		/<a href="../LJCDBAccessLib.html">LJCDBAccessLib</a>
+		/<a href="DbColumnsXML.html">DbColumnsXML</a>
 		/SerializeToString
 	</div>
 	<br />
@@ -32,7 +32,7 @@
 				<tr><th class='CodeTable'>PHP</th></tr>
 				<tr class='CodeTable'>
 					<td class='CodeTable'>
-						public function SerializeToString($xmlFileName = null) : string
+						public function SerializeToString(LJCDbColumns $dbColumns<br />, $xmlFileName = null) : string
 					</td>
 				</tr>
 			</tbody>
@@ -41,25 +41,6 @@
 	<br />
 	<div class='Text'>
 		_FunctionSummary_
-	</div>
-	<br />
-	<div class='Text'>Example</div>
-	<br />
-	<div class='SectionContainer'>
-		<table class='CodeTable'>
-			<tbody>
-				<tr class='CodeTable'><th class='CodeTable'>PHP</th></tr>
-				<tr class='CodeTable'>
-					<td class='CodeTable'>
-						<pre style='margin-left: 2px;'>
- require_once "LJCDocDataLib.php";
- 
- $docDataFile = LJCDocDataFile::Deserialize("DocData.xml");
- $xmlString = $docDataFile->SerializeToString();</pre>
-					</td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 	<br />
 	<div class='SmallText'>Copyright &copy; Lester J. Clark 2022 - All Rights Reserved</div>
