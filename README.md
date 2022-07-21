@@ -1,11 +1,11 @@
 # WebSites
 These are my Code Documentation web sites.
  
-### LJCPHPCodeDoc
+### CodeDoc/LJCPHPCodeDoc
 These are the technical CodeDoc pages for the LJCPHPProjects repository. 
  
-### LJCDBDiagrams
+### CodeDoc/LJCDBDiagrams
 These are the Database Diagram pages for the private C# repository.
 
-### LJCCodeDoc
+### CodeDoc/LJCCodeDoc
 These are the technical CodeDoc pages for the private C# repository.
