@@ -9,6 +9,6 @@ LJCDBDiagrams
 -------------
 These are the Database Diagram pages for the private C# repository.
 
-LJCProjects
+LJCCodeDoc
 ------------
 These are the technical CodeDoc pages for the private C# repository.
